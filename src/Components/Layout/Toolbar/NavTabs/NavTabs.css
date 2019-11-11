@@ -1,0 +1,28 @@
+.NavTabs {
+  position: absolute;
+  bottom: 0;
+  left: 70px;
+  width: 200px;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  list-style: none;
+}
+
+.NavTab {
+  list-style: none;
+  color: darkgray;
+  height: 100%;
+  line-height: 35px;
+  cursor: pointer;
+}
+
+.NavTab_active {
+  list-style: none;
+  color: darkgray;
+  height: 100%;
+  line-height: 35px;
+  border-bottom: 3px solid yellowgreen;
+  cursor: pointer;
+}

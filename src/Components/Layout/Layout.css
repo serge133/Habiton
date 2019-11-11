@@ -1,0 +1,4 @@
+.Layout {
+    display: grid;
+    grid-template: 70px calc(100vh - 70px) / 1fr;
+}
