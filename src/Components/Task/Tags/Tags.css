@@ -1,0 +1,27 @@
+.Tags {
+    height: 25px;
+    display: flex;
+}
+
+.Tag {
+    transition-duration: 1s;
+    padding: 0 10px;
+    height: 25px;
+    border-radius: 7px;
+    margin-right: 4px;
+    position: relative;
+}
+
+.Tag:hover{
+    padding: 0 20px 0 10px;
+}
+.Tag .Remove {
+    visibility: hidden;
+}
+.Tag:hover .Remove {
+    visibility: visible;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    color: white;
+}

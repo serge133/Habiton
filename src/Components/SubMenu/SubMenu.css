@@ -1,0 +1,24 @@
+.Popup {
+    position: absolute;
+    height: 200px;
+    min-width: 150px;
+    padding: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    z-index: 5;
+    background-color: white;
+    transform: translate(0, 100%);
+    border: 1px solid #ededed;
+}
+
+.Arrow {
+    width: 20px;
+    height: 20px;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right:10px;
+    transform: translate(0, -50%) rotate(45deg);
+    border-top: 1px solid #ededed;
+    border-left: 1px solid #ededed;
+    background-color: white;
+}

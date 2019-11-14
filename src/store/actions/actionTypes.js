@@ -1,1 +1,8 @@
-export const EXAMPLE_ACTION_TYPE = 'EXAMPLE_ACTION_TYPE';
+export const OPEN_TAGS_MENU = 'OPEN_TAGS_MENU';
+export const DELETE_TASK = 'DELETE_TASK';
+export const ADD_TAG = 'ADD_TAG';
+
+export const DELETE_TAG = 'DELETE_TAG';
+export const APPLY_TAG = 'APPLY_TAG';
+export const CHANGE_TAG_COLOR = 'CHANGE_TAG_COLOR';
+export const REMOVE_TASK_TAG = 'REMOVE_TASK_TAG';

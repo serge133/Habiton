@@ -1,0 +1,16 @@
+.MenuButton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50px;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    border-right: 1px solid #ededed;
+}
+
+.MenuButton img{
+    width: 20px;
+}

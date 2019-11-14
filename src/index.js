@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+// * Routing
+import routing from './routes';
 
 // * Redux
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 // Reducers
-import reducer from './store/reducers/reducer';
+import tasksReducer from './store/reducers/tasks';
+import subMenuReducer from './store/reducers/subMenu';
 import thunk from 'redux-thunk';
 
 // * Connection to the redux extension
@@ -18,7 +19,8 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 // * The combination of multiple reducers (global state)
 const rootReducer = combineReducers({
-  reducerOne: reducer
+  tsk: tasksReducer,
+  sbMenu: subMenuReducer
 });
 
 // * The redux store that has active asynchronous operations
@@ -27,11 +29,7 @@ const store = createStore(
   composeEnhancers(applyMiddleware(thunk))
 );
 
-const routing = (
-  <Router>
-    <Route exact path="/" component={App} />
-  </Router>
-);
+
 
 ReactDOM.render(
   <Provider store={store}>{routing}</Provider>,

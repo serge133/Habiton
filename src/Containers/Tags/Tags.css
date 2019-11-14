@@ -1,0 +1,63 @@
+.Tags {
+    width: 300px;
+    height: 100%;
+    overflow: auto;
+}
+
+.Tag {
+    transition-duration: 0.5s;
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+    padding: 0 5px;
+    margin-top: 7px;
+    margin-right: 7px;
+    border: 1px solid #ededed;
+    position: relative;
+}
+
+.Tag:hover {
+    transition-duration: 0.5s;
+    padding: 0 40px 0 5px;
+}
+
+.Tag .Delete {
+    visibility: hidden;
+    position: absolute;
+    top: -2px;
+    right: 5px;
+}
+
+.Tag:hover .Delete {
+    transition-delay: 0.5s;
+    visibility: visible;
+    color: red;
+}
+
+.Tag .ColorBtn {
+    visibility: hidden;
+    height: 15px;
+    position: absolute;
+    top: 3px;
+    right: 15px;
+}
+
+.Tag:hover .ColorBtn {
+    transition-delay: 0.5s;
+    visibility: visible;
+}
+
+
+.Input {
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    outline: none;
+    color: #ccc;
+    height: 25px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.Input:focus {
+    border: 1px solid yellowgreen;
+}
