@@ -4,4 +4,5 @@ const layoutContext = createContext({
     path: ''
 });
 
+
 export default layoutContext;

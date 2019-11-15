@@ -34,6 +34,14 @@ const deleteTask = (state, action) => {
   return updateObject(state, { tasks: copyTasks });
 };
 
+const changeTaskPriority = (state, action) => {
+  const copyTasks = [...state.tasks];
+  const taskIndex = copyTasks.findIndex(t => t.id === action.taskId);
+  if (taskIndex < 0) return state;
+  copyTasks[taskIndex].priority = action.priority;
+  return updateObject(state, { tasks: copyTasks });
+};
+
 // * Task Tag Actions
 const addTag = (state, action) => {
   const newTag = {
@@ -94,6 +102,8 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.DELETE_TASK:
       return deleteTask(state, action);
+    case actionTypes.CHANGE_TASK_PRIORITY:
+      return changeTaskPriority(state, action);
     case actionTypes.ADD_TAG:
       return addTag(state, action);
     case actionTypes.APPLY_TAG:

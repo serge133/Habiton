@@ -14,6 +14,15 @@ const Task = props => {
     props.removeTag(props.task.id, tagId);
   }
 
+  const handleTogglePriority = () => {
+    const priorities = [1, 2, 3];
+    // Priority is a number
+    const { priority: oldPriority } = props.task;
+    const newPriority = priorities[oldPriority % priorities.length];
+
+    props.changePriority(props.task.id, newPriority);
+  }
+
   return (
     <li className={classes.Task}>
       {props.task.name}
@@ -22,6 +31,7 @@ const Task = props => {
         toggleTags={props.openTagsMenu}
         deleteTask={props.deleteTask}
         isTaskMenuSelected={isTaskMenuSelected}
+        togglePriority={handleTogglePriority}
       />
       <TaskTags tags={props.task.tags} removeTag={handleRemoveTaskTag}/>
       {isTaskMenuSelected ? <Tags task={props.task}/> : null}

@@ -20,6 +20,7 @@ const Tasks = props => {
           tagsSubMenu={props.tagsSubMenu}
           openTagsMenu={props.openTagsMenu}
           removeTag={props.removeTaskTag}
+          changePriority = {props.changeTaskPriority}
         />
       ))}
     </ul>
@@ -37,7 +38,8 @@ const mapDispatchToProps = dispatch => {
   return {
     openTagsMenu: taskId => dispatch(subMenuActions.openTagsMenu(taskId)),
     deleteTask: taskId => dispatch(taskActions.deleteTask(taskId)),
-    removeTaskTag: (taskId, tagId) => dispatch(taskActions.removeTaskTag(taskId, tagId))
+    removeTaskTag: (taskId, tagId) => dispatch(taskActions.removeTaskTag(taskId, tagId)),
+    changeTaskPriority: (taskId, priority) => dispatch(taskActions.changeTaskPriority(taskId, priority)),
   };
 };
 

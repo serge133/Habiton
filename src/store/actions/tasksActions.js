@@ -46,3 +46,11 @@ export const removeTaskTag = (taskId, tagId) => {
     tagId: tagId
   }
 };
+
+export const changeTaskPriority = (taskId, priority) => {
+  return {
+    type: actionTypes.CHANGE_TASK_PRIORITY,
+    taskId: taskId,
+    priority: priority
+  };
+};

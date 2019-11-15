@@ -5,25 +5,30 @@ import prioritySVG from "../../../assets/arrow.svg";
 import trashSVG from "../../../assets/trash.svg";
 
 const TaskControl = props => {
+  const priorityColors = ['#ccc', 'black', 'red'];
+
   const priorityStyle = {
-    transform: `rotate(${90}deg)`
+    fontSize: '2rem',
+    marginBottom: 25,
+    color: priorityColors[props.task.priority - 1],
   };
 
   return (
     <div className={classes.Controls}>
       <img
         className={classes.Control}
-        style={props.isTaskMenuSelected ? {opacity: 0.8} : null}
+        style={props.isTaskMenuSelected ? { opacity: 0.8 } : null}
         src={tagSVG}
         alt="set a tag"
         onClick={() => props.toggleTags(props.task.id)}
       />
-      <img
+      <div
         className={classes.Control}
-        src={prioritySVG}
         style={priorityStyle}
-        alt="Set Priority"
-      />
+        onClick={props.togglePriority}
+      >
+        &#8593;
+      </div>
       <img
         className={classes.Control}
         src={trashSVG}
